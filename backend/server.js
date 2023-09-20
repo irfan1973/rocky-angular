@@ -1,4 +1,4 @@
-const http = require("http");
+const http = require("https");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const express = require("express");
@@ -63,6 +63,7 @@ app.post("/upload", (req, res) => {
 
 app.post("/email", (req, res) => {
   var err = "";
+  console.log(req.body);
   if (req.body.from == undefined || req.body.from == "")
     err = "Please enter from email address";
   if (req.body.to == undefined || req.body.to == "")

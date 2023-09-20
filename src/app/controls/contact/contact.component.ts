@@ -22,8 +22,9 @@ export class ContactComponent {
   contactUs() {
     let emailParams: any = {};
     emailParams.to = "contact@rockyroadsolutions.com";
-    emailParams.email = this.email;
+    emailParams.from = this.email;
     emailParams.subject = this.subject;
+
     emailParams.message =
       "Hi Support user with email " +
       this.email +
