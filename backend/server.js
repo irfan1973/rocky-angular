@@ -91,13 +91,11 @@ app.post("/email", (req, res) => {
 
     // Define the email content
     const mailOptions = {
-      from: "contact@rockyroadsolutions.com",
+      from: req.body.email,
       to: "irfan.gill@gmail.com",
       cc: "iffaygill@hotmail.com",
       subject: req.body.subject,
       message: req.body.message,
-      name: req.body.name,
-      cell: req.body.cell,
     };
 
     // Send the email

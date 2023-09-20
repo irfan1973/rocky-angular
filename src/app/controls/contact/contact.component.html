@@ -41,7 +41,7 @@
       </div>
 
       <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-        <form class="php-email-form" (submit)="contactUs(contactForm)" #contactForm="ngForm">
+        <form class="php-email-form" (submit)="contactUs()" #contactForm>
           <div class="form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" [(ngModel)]="name"
               required />
@@ -56,7 +56,7 @@
           </div>
           <div class="form-group">
             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-              [ngModel]="subject" required />
+              [(ngModel)]="subject" required />
           </div>
           <div class="form-group">
             <textarea class="form-control" name="message" rows="5" placeholder="Message" [(ngModel)]="message"
